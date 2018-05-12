@@ -3,7 +3,7 @@
  * @Author: Alamr
  * @Date:   2018-05-12 18:52:11
  * @Last Modified by:   Alamr
- * @Last Modified time: 2018-05-12 19:20:20
+ * @Last Modified time: 2018-05-12 22:37:08
  */
 add_theme_support('post-thumbnails');
 register_nav_menus(array(
@@ -76,19 +76,6 @@ add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
 function my_css_attributes_filter($var) {
     return is_array($var) ? array() : '';
 }
-//SMTP邮箱设置
-function mail_smtp( $phpmailer ){
-    $phpmailer->From = "ysnv1997@163.com"; //发件人
-    $phpmailer->FromName = "Stay Ma"; //发件人昵称
-    $phpmailer->Host = "smtp.163.com"; //SMTP服务器地址
-    $phpmailer->Port = 25; //SMTP端口，常用的有25、465、587，具体谷歌百度
-    $phpmailer->SMTPSecure = ""; //SMTP加密方式，常用的有SSL/TLS，具体谷歌百度
-    $phpmailer->Username = "ysnv1997@163.com"; //邮箱帐号
-    $phpmailer->Password = 'mA159753'; //邮箱密码
-    $phpmailer->IsSMTP(); //使用SMTP发送
-    $phpmailer->SMTPAuth = true; //启用SMTPAuth服务
-}
-add_action('phpmailer_init','mail_smtp');
 //获取文章的评论人数
 function zfunc_comments_users($postid = 0, $which = 0) {
     $comments = get_comments('status=approve&type=comment&post_id=' . $postid);
@@ -213,7 +200,7 @@ function reply_to_read($atts, $content = null) {
     if ($user_ID > 0) {
         $email = get_userdata($user_ID)->user_email;
         //对博主直接显示内容
-        $admin_email = '100954636@qq.com'; //博主Email
+        $admin_email = 'abc@qq.com'; //博主Email
         if ($email == $admin_email) {
             return $content;
         }
@@ -261,35 +248,6 @@ $args = array( 'labels' => $labels,
 'menu_position' => null, 'supports' => array('editor','author','title', 'custom-fields') );
 register_post_type('shuoshuo',$args);
 }
-//评论回复邮件
-function comment_mail_notify($comment_id) {
-    $comment = get_comment($comment_id);
-    $parent_id = $comment->comment_parent ? $comment->comment_parent : '';
-    $spam_confirmed = $comment->comment_approved;
-    if (($parent_id != '') && ($spam_confirmed != 'spam')) {
-    $wp_email = 'no-reply@' . preg_replace('#^www\.#', '', strtolower($_SERVER['SERVER_NAME']));//发件人e-mail地址，no-reply可改为可用的e-mail
-    $to = trim(get_comment($parent_id)->comment_author_email);
-    $subject = '您在 [' . get_option("blogname") . '] 的留言有了回应';
-    $message = '<div style="border-right:#666666 1px solid;border-radius:8px;color:#111;font-size:12px;width:95%;border-bottom:#666666 1px solid;font-family:微软雅黑,arial;margin:10px auto 0px;border-top:#666666 1px solid;border-left:#666666 1px solid"><div class="adM">
-    </div><div style="width:100%;background:#666666;min-height:60px;color:white;border-radius:6px 6px 0 0"><span style="line-height:60px;min-height:60px;margin-left:30px;font-size:12px">您在<a style="color:#00bbff;font-weight:600;text-decoration:none" href="' . get_option('home') . '" target="_blank">' . get_option('blogname') . '</a> 上的留言有回复啦！</span> </div>
-    <div style="margin:0px auto;width:90%">
-    <p><span style="font-weight:bold;">' . trim(get_comment($parent_id)->comment_author) . '</span>, 您好!</p>
-    <p>您于' . trim(get_comment($parent_id)->comment_date) . ' 在文章《' . get_the_title($comment->comment_post_ID) . '》上发表评论: </p>
-    <p style="border-bottom:#ddd 1px solid;border-left:#ddd 1px solid;padding-bottom:20px;background-color:#eee;margin:15px 0px;padding-left:20px;padding-right:20px;border-top:#ddd 1px solid;border-right:#ddd 1px solid;padding-top:20px">' . nl2br(get_comment($parent_id)->comment_content) . '</p>
-    <p><span style="font-weight:bold;">' . trim($comment->comment_author) . '</span> 于' . trim($comment->comment_date) . ' 给您的回复如下: </p>
-    <p style="border-bottom:#ddd 1px solid;border-left:#ddd 1px solid;padding-bottom:20px;background-color:#eee;margin:15px 0px;padding-left:20px;padding-right:20px;border-top:#ddd 1px solid;border-right:#ddd 1px solid;padding-top:20px">' . nl2br($comment->comment_content) . '</p>
-    <p>您可以点击 <a style="color:#00bbff;text-decoration:none" href="' . htmlspecialchars(get_comment_link($parent_id)) . '" target="_blank">查看回复的完整内容</a></p>
-    <p>感谢你对 <a style="color:#00bbff;text-decoration:none" href="' . get_option('home') . '" target="_blank">' . get_option('blogname') . '</a> 的关注，如您有任何疑问，欢迎在博客留言，我会一一解答</p><p style="color:#A8979A;">(此邮件由系统自动发出，请勿回复。)</p></div></div>';
-    $from = "From: \"" . get_option('blogname') . "\" <$wp_email>";
-    $headers = "$from\nContent-Type: text/html; charset=" . get_option('blog_charset') . "\n";
-    wp_mail( $to, $subject, $message, $headers );
-    }
-}
-add_action('comment_post', 'comment_mail_notify');
-
-
-
-
 
 //添加HTML编辑器自定义快捷标签按钮
 add_action('after_wp_tiny_mce', 'add_button_mce');
@@ -298,10 +256,10 @@ function add_button_mce($mce_settings) {
 <script type="text/javascript">
     QTags.addButton( 'hr', 'hr', "\n<hr />\n", "" );
     QTags.addButton( 'quote', '引用文章', "\n[stayma_get_post ids=??????]\n", "" );
-    QTags.addButton( 'd-html', 'HTML高亮', "\n<pre class=\"line-numbers language-html\"><code class=\"language-html\">\n", "\n</code></pre>\n" );
-    QTags.addButton( 'd-css', 'CSS高亮', "\n<pre class=\"line-numbers language-css\"><code class=\"language-css\">\n", "\n</code></pre>\n" );
-    QTags.addButton( 'd-javascript', 'javascript高亮', "\n<pre class=\"line-numbers language-javascript\"><code class=\"language-javascript\">\n", "\n</code></pre>\n" );
-    QTags.addButton( 'd-php', 'php高亮', "\n<pre class=\"line-numbers language-php\"><code class=\"language-php\">\n", "\n</code></pre>\n" );
+    QTags.addButton( 'd-html', 'HTML高亮', "\n<pre class=\"line-numbers language-html\"><code class=\"language-html\">", "</code></pre>\n" );
+    QTags.addButton( 'd-css', 'CSS高亮', "\n<pre class=\"line-numbers language-css\"><code class=\"language-css\">", "</code></pre>\n" );
+    QTags.addButton( 'd-javascript', 'javascript高亮', "\n<pre class=\"line-numbers language-javascript\"><code class=\"language-javascript\">", "</code></pre>\n" );
+    QTags.addButton( 'd-php', 'php高亮', "\n<pre class=\"line-numbers language-php\"><code class=\"language-php\">", "</code></pre>\n" );
     QTags.addButton( 'commLook', '评论后可见', "[reply]", "[/reply]\n" );
 </script>
 <?php
