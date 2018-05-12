@@ -3,7 +3,7 @@
  * @Author: Alamr
  * @Date:   2018-05-12 18:52:11
  * @Last Modified by:   Alamr
- * @Last Modified time: 2018-05-12 19:13:08
+ * @Last Modified time: 2018-05-12 19:20:20
  */
 add_theme_support('post-thumbnails');
 register_nav_menus(array(
@@ -78,15 +78,15 @@ function my_css_attributes_filter($var) {
 }
 //SMTP邮箱设置
 function mail_smtp( $phpmailer ){
-$phpmailer->From = "ysnv1997@163.com"; //发件人
-$phpmailer->FromName = "Stay Ma"; //发件人昵称
-$phpmailer->Host = "smtp.163.com"; //SMTP服务器地址
-$phpmailer->Port = 25; //SMTP端口，常用的有25、465、587，具体谷歌百度
-$phpmailer->SMTPSecure = ""; //SMTP加密方式，常用的有SSL/TLS，具体谷歌百度
-$phpmailer->Username = "ysnv1997@163.com"; //邮箱帐号
-$phpmailer->Password = 'mA159753'; //邮箱密码
-$phpmailer->IsSMTP(); //使用SMTP发送
-$phpmailer->SMTPAuth = true; //启用SMTPAuth服务
+    $phpmailer->From = "ysnv1997@163.com"; //发件人
+    $phpmailer->FromName = "Stay Ma"; //发件人昵称
+    $phpmailer->Host = "smtp.163.com"; //SMTP服务器地址
+    $phpmailer->Port = 25; //SMTP端口，常用的有25、465、587，具体谷歌百度
+    $phpmailer->SMTPSecure = ""; //SMTP加密方式，常用的有SSL/TLS，具体谷歌百度
+    $phpmailer->Username = "ysnv1997@163.com"; //邮箱帐号
+    $phpmailer->Password = 'mA159753'; //邮箱密码
+    $phpmailer->IsSMTP(); //使用SMTP发送
+    $phpmailer->SMTPAuth = true; //启用SMTPAuth服务
 }
 add_action('phpmailer_init','mail_smtp');
 //获取文章的评论人数

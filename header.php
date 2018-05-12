@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset=utf-8>
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" >
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/component.css">
-    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css">

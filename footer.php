@@ -3,7 +3,7 @@
  * @Author: Alamr
  * @Date:   2018-05-05 14:16:53
  * @Last Modified by:   Alamr
- * @Last Modified time: 2018-05-07 20:55:16
+ * @Last Modified time: 2018-05-12 21:21:14
  */
 ?>
         <footer class="blogFooter">
@@ -24,8 +24,5 @@
                 <?php echo stripslashes(get_option('stay_tongji')); ?>
             </div>
         </footer>
-    <script src="<?php bloginfo('template_url'); ?>/js/prism.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/pjax.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/nprogress.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/jquery.magnific-popup.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/public.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/app.js"></script>

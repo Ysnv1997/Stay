@@ -3,7 +3,7 @@
  * @Author: Alamr
  * @Date:   2018-05-05 14:15:23
  * @Last Modified by:   Alamr
- * @Last Modified time: 2018-05-09 21:19:59
+ * @Last Modified time: 2018-05-12 21:46:37
  */
 ?>
 <!-- blogSidebar -->
@@ -22,7 +22,7 @@
     <h2><i class="fa fa-signal"></i> Top  List</h2>
         <ul>
         <?php
-        $post_num = 10; // 设置调用条数
+        $post_num =6; // 设置调用条数
         $args = array(
         'post_password' => '',
         'post_status' => 'publish',
@@ -41,4 +41,5 @@
         <?php } wp_reset_query();?>
         </ul>
     </div>
+
 </div>
