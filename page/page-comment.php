@@ -23,7 +23,6 @@ url: http://www.stayma.cn
                             <article class="article artText">
                                     <?php the_content(); ?>
                             </article>
-
                         </div>
                         <?php } ?>
                         <div class="comments-div">

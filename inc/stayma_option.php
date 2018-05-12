@@ -1,8 +1,7 @@
 <?php
-$themename = "stay";
+$themename = "Stay";
 $shortname = "stay";
 $options = array (
-
     array(
         "name" => "首页描述 Description",
         "id" => $shortname."_description",
@@ -126,9 +125,7 @@ function mytheme_admin() {
     global $themename, $shortname, $options;
     if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated notice is-dismissible"><p>'.$themename.' 设置已保存。</p></div>';
 ?>
-
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
-
 <div class="container-fluid">
     <h2 class=""><?php echo $themename; ?> <a href="https://www.stayma.cn/stay-style" target="_blank" data-toggle="tooltip" data-placement="bottom" title="点击查看更新"><span class="text-muted">v1.0.0</span></a></h2>
     <hr class="wp-header-end">
@@ -200,7 +197,6 @@ $(function () {
     $('[class="input-color"]').wpColorPicker();
 });
 </script>
-
 <?php
 }
 add_action('admin_menu', 'mytheme_add_admin');

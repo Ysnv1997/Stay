@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset=utf-8>
-    <meta name=description content="">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/component.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css">
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
     <title><?php if ( is_home() ) {
@@ -24,7 +23,6 @@
     <meta name="description" content="<?php echo stripslashes(get_option('stay_description')); ?>" />
     <meta name="keywords" content="<?php echo stripslashes(get_option('stay_keywords')); ?>" />
 </head>
-
 <body>
     <header class="header" id="header">
         <div class="headerZ">

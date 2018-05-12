@@ -17,7 +17,6 @@ url: http://www.stayma.cn
         <div class="main">
             <div class="hestiaBlogs">
                 <div class="container">
-
                     <div class="ssbody">
                     <div class="shuoshuo">
                     <ul class="archives-monthlisting">
@@ -26,7 +25,6 @@ url: http://www.stayma.cn
                     <div class="shuoshuo-content">
                         <?php the_content(); ?>
                         <span class="tt"><?php the_time('Y年n月j日G:H'); ?></span>
-
                     </div><?php endwhile;endif; ?></li>
                     </ul>
                     </div>

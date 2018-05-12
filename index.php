@@ -3,32 +3,30 @@
     <div class="headerFilter" style="background:<?php echo stripslashes(get_option('stay_color'));?>
     <?php if(!empty(stripslashes(get_option('stay_topBg')))):?>;background: url(<?php echo stripslashes(get_option('stay_topBg')); ?>);<?php endif;?>">
         <div class="headerFilterZ">
-
             <?php if ( is_home() ) {
-                    echo '<div class="blogName" style="color:'.stripslashes(get_option('stay_title_color')).'">';
-                    bloginfo('name');
-                    echo '</div>';
-                } elseif ( is_category() ) {
-                    echo '<div class="blogName style="color:'.stripslashes(get_option('stay_title_color')).'"">';
-                    single_cat_title();
-                    echo '</div>';
+                echo '<div class="blogName" style="color:'.stripslashes(get_option('stay_title_color')).'">';
+                bloginfo('name');
+                echo '</div>';
+            } elseif ( is_category() ) {
+                echo '<div class="blogName style="color:'.stripslashes(get_option('stay_title_color')).'"">';
+                single_cat_title();
+                echo '</div>';
 
-                } elseif (is_single() || is_page() ) {
-                    echo '<div class="blogName style="color:'.stripslashes(get_option('stay_title_color')).'"">';
-                    single_post_title();
-                    echo'</div>';
-                }else{
-                    echo '<div class="blogName style="color:'.stripslashes(get_option('stay_title_color')).'"">';
-                    bloginfo('name');
-                    echo '</div>';
-                    };?>
+            } elseif (is_single() || is_page() ) {
+                echo '<div class="blogName style="color:'.stripslashes(get_option('stay_title_color')).'"">';
+                single_post_title();
+                echo'</div>';
+            }else{
+                echo '<div class="blogName style="color:'.stripslashes(get_option('stay_title_color')).'"">';
+                bloginfo('name');
+                echo '</div>';
+                };?>
         </div>
     </div>
     <div class="main">
         <div class="hestiaBlogs">
             <div class="container">
                 <div class="blogsPost">
-
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <!-- post -->
                     <article class="post" post-id="<?php the_ID(); ?>">
