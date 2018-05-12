@@ -19,9 +19,6 @@ url: http://www.stayma.cn
             <div class="hestiaBlogs">
                 <div class="container">
                     <div class="links">
-                        <?php if( have_posts() ){ the_post();?>
-                                    <?php the_content(); ?>
-                         <?php }; ?>
                     <?php $bookmarks=get_bookmarks();
                         if ( !empty($bookmarks) ){
                         echo '<ul>';
