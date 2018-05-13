@@ -3,7 +3,7 @@
  * @Author: Alamr
  * @Date:   2018-05-05 14:15:23
  * @Last Modified by:   Alamr
- * @Last Modified time: 2018-05-12 21:46:37
+ * @Last Modified time: 2018-05-13 11:29:10
  */
 ?>
 <!-- blogSidebar -->
@@ -41,5 +41,4 @@
         <?php } wp_reset_query();?>
         </ul>
     </div>
-
 </div>

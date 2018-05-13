@@ -3,7 +3,7 @@
  * @Author: Alamr
  * @Date:   2018-05-05 14:18:02
  * @Last Modified by:   Alamr
- * @Last Modified time: 2018-05-09 18:54:10
+ * @Last Modified time: 2018-05-13 11:29:05
  */
 ?>
 <?php get_header(); ?>
@@ -56,5 +56,4 @@
         </div>
     </div>
 </body>
-
 </html>

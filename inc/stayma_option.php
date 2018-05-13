@@ -53,33 +53,6 @@ $options = array (
     array(
         "type" => "hr",
     ),
-    // array(
-    //     "name" => "Weibo地址",
-    //     "id" => $shortname."_weibo_url",
-    //     "type" => "text",
-    //     "std" => "https://weibo.com/782622",
-    // ),
-    // array(
-    //     "name" => "Twitter地址",
-    //     "id" => $shortname."_twitter_url",
-    //     "type" => "text",
-    //     "std" => "https://twitter.com/JieTangOK",
-    // ),
-    // array(
-    //     "name" => "Facebook地址",
-    //     "id" => $shortname."_facebook_url",
-    //     "type" => "text",
-    //     "std" => "https://www.facebook.com/jietangok",
-    // ),
-    // array(
-    //     "name" => "GitHub地址",
-    //     "id" => $shortname."_github_url",
-    //     "type" => "text",
-    //     "std" => "https://github.com/Jarvis-Tang",
-    // ),
-    array(
-        "type" => "hr",
-    ),
     array(
         "name" => "备案号",
         "id" => $shortname."_record",
@@ -97,7 +70,7 @@ $options = array (
         "id" => $shortname."_tongji",
         "type" => "textarea",
         "std" => "代码在页面底部，统计标识不会显示，但不影响统计效果"
-    ),
+    )
 
 );
 function mytheme_add_admin() {
@@ -127,7 +100,7 @@ function mytheme_admin() {
 ?>
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
 <div class="container-fluid">
-    <h2 class=""><?php echo $themename; ?> <a href="https://www.stayma.cn/stay-style" target="_blank" data-toggle="tooltip" data-placement="bottom" title="点击查看更新"><span class="text-muted">v1.0.0</span></a></h2>
+    <h2 class=""><?php echo $themename; ?> <a href="https://www.stayma.cn/stay-style" target="_blank" data-toggle="tooltip" data-placement="bottom" title="点击查看更新"><span class="text-muted">v2.0.0</span></a></h2>
     <hr class="wp-header-end">
     <hr>
     <form class="form-horizontal" method="post">

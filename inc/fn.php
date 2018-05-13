@@ -3,7 +3,7 @@
  * @Author: Alamr
  * @Date:   2018-05-12 18:52:11
  * @Last Modified by:   Alamr
- * @Last Modified time: 2018-05-12 22:37:08
+ * @Last Modified time: 2018-05-13 12:44:10
  */
 add_theme_support('post-thumbnails');
 register_nav_menus(array(
@@ -310,4 +310,3 @@ function simple_comment($comment, $args, $depth) {
 </div>
 <?php
 } ?>
-

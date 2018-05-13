@@ -32,7 +32,7 @@ url: http://www.stayma.cn
 
                 </div>
             </div>
-    <?php get_footer(); ?>
+        <?php get_footer(); ?>
         </div>
     </div>
 </body>

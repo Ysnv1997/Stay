@@ -47,10 +47,10 @@ url: http://www.stayma.cn
                         </div>
                     </div>
                     <!-- blogSidebar -->
-        <?php get_sidebar(); ?>
+                <?php get_sidebar(); ?>
                 </div>
             </div>
-    <?php get_footer(); ?>
+        <?php get_footer(); ?>
         </div>
     </div>
 </body>

@@ -3,7 +3,7 @@
  * @Author: Alamr
  * @Date:   2018-05-05 14:16:53
  * @Last Modified by:   Alamr
- * @Last Modified time: 2018-05-12 21:21:14
+ * @Last Modified time: 2018-05-13 12:19:01
  */
 ?>
         <footer class="blogFooter">
@@ -25,4 +25,4 @@
             </div>
         </footer>
     <script src="<?php bloginfo('template_url'); ?>/js/public.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/app.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/app.min.js"></script>
