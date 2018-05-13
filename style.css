@@ -75,6 +75,7 @@ a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,d
 .nextPage div a{display:block;padding:16px 30px;text-transform:uppercase;font-family:'Cabin',Helvetica,sans-serif;letter-spacing:2.5px;color:#aaa;font-size:14px;font-size:0.875em;background:#7fcaad;color:#fFf;}
 .nextPage div a:hover{opacity:.8;}
 #noArticle{display:block;margin:150px auto 0;font-size:2rem;text-align:center;}
+
 /***********************************************
 *                   侧边栏
  **********************************************/
@@ -285,6 +286,7 @@ input#submit{color:#fff;}
     .wp-embed-post-heading{font-size:1rem!important;}
     .wp-embed-post-excerpt{font-size:0.875rem!important;}
 }
+
 /***********************************************
 *                   代码高亮
  **********************************************/
@@ -345,7 +347,7 @@ pre.line-numbers > code{position:relative;}
 /***********************************************
 *                   友情链接
  **********************************************/
-.links{overflow:hidden;max-width:60rem;margin:0 auto;}
+.links{overflow:hidden;width:82%;margin:0 auto;}
 .links>ul{overflow:hidden;margin-bottom:30px;text-align:center;}
 .links>ul>li{text-align:center;display:block;float:left;width:292px;height:280px;padding:0 20px;border:1px solid #e6e6e6;border-radius:4px;background-color:hsla(0,0%,71%,.1);transition:.2s ease;-webkit-transition:.2s ease;box-sizing:border-box;margin:0 10.5px;margin-top:80px;}
 .links>ul>li:hover{box-shadow:0 5px 20px rgba(0,0,0,.1)}
@@ -356,4 +358,5 @@ pre.line-numbers > code{position:relative;}
 .links>ul>li:hover .but-success{opacity:0.8}
 @media(max-width:642px){
     .links>ul>li{float:none;margin:80px auto 0;}
+    .links{width:100%;}
 }
